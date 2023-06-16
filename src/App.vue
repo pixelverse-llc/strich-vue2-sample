@@ -1,5 +1,5 @@
 <script setup>
-import {ref} from "vue";
+import {ref, onUnmounted} from "vue";
 import Header from './components/Header.vue'
 import {BarcodeReader, StrichSDK} from "@pixelverse/strichjs-sdk";
 
@@ -25,6 +25,12 @@ StrichSDK.initialize(licenseKey)
       const barcodeReader = new BarcodeReader(configuration);
       barcodeReader.initialize()
           .then(() => {
+
+            // destroy the BarcodeReader when this component is unmounted
+            onUnmounted(() => {
+              barcodeReader.destroy();
+            });
+
             barcodeReader.detected = (newDetections) => {
               detections.value.push(newDetections[0]);
               console.log(`New scan: [${newDetections[0].data}]`);
