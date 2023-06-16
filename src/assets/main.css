@@ -1,0 +1,17 @@
+@import "./base.css";
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  font-weight: normal;
+  display: flex;
+  flex-direction: column;
+}
+
+#scanner {
+  height: 320px;
+  background-color: black;
+
+  /* relative positioning required for STRICH SDK */
+  position: relative;
+}
