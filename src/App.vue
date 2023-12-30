@@ -19,8 +19,7 @@ StrichSDK.initialize(licenseKey)
         },
         frameSource: {
           resolution: 'full-hd',
-        },
-        debug: true
+        }
       };
       const barcodeReader = new BarcodeReader(configuration);
       barcodeReader.initialize()
