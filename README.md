@@ -1,5 +1,7 @@
 # strich-vue2-sample
 
+__DEPRECATION NOTICE: THIS SAMPLE IS NO LONGER MAINTAINED. PLEASE REFER TO THE [VUE 3 SAMPLE](https://github.com/pixelverse-llc/strich-vue3-sample) INSTEAD.__
+
 This repository shows to integrate STRICH SDK in a Vue 2.x project.
 
 You need a valid license key to run this sample. To get started with STRICH SDK, check out
